@@ -1,0 +1,21 @@
+{
+  "name": "Basic Python",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "esbenp.prettier-vscode",
+        "formulahendry.code-runner",
+        "seatonjiang.gitmoji-vscode",
+        "aaron-bond.better-comments"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/pipx-package:1": {},
+    "ghcr.io/devcontainers-contrib/features/poetry:2": {}
+  },
+  "postCreateCommand": "cd src && poetry shell && poetry install --no-root"
+}
