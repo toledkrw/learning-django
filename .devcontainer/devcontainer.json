@@ -17,5 +17,6 @@
     "ghcr.io/devcontainers-contrib/features/pipx-package:1": {},
     "ghcr.io/devcontainers-contrib/features/poetry:2": {}
   },
-  "postCreateCommand": "cd src && poetry shell && poetry install --no-root"
+  "postCreateCommand": "poetry shell && poetry install --no-root",
+  "postAttachCommand": "poetry shell"
 }
